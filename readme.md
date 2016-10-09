@@ -33,7 +33,7 @@ the project use webpack-dev-server
 ## How it works
 
 For dev we set publicPath to `'/dist/'` to specify to webpack-dev-server where files should be.
-But in production and because we want fonts to be relative the css file, we set publicPath to `''`.
+But in production and because we want fonts to be relative to the css file, we set publicPath to `''`.
 In the css built we got something like that `@font-face{font-family:FontAwesome;src:url(25a32416abee198dd821b0b17a198a8f.eot);`.
 
 Now it works on gh-pages and this is not depending on base url.
