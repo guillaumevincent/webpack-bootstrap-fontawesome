@@ -86,7 +86,7 @@ webpack.config.js
             loaders: [
                 {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
                 {test: /\.(png|jpg|jpeg|gif)$/, loader: 'url?limit=10000&name=images/[name].[ext]',},
-                {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
+                {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader", {publicPath: ''})},
                 {test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file-loader'}
             ]
         },
@@ -104,7 +104,6 @@ webpack.config.js
     
     if (process.env.NODE_ENV === 'production') {
         module.exports.devtool = false;
-        module.exports.output.publicPath = '';
         module.exports.plugins = (module.exports.plugins || []).concat([
             new webpack.DefinePlugin({
                 'process.env': {
