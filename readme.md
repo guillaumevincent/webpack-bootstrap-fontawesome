@@ -1,3 +1,5 @@
+:warning: this package is deprecated
+
 # webpack bootstrap and fontawesome demo
 
 Webpack + Boostrap 4 + Font Awesome demo
